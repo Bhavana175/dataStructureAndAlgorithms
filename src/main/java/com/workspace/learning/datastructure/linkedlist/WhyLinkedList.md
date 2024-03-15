@@ -1,6 +1,4 @@
-package com.workspace.learning.datastructure.linkedlist;
 
-public class WhyLinkedList {
 
     /**
      * When to Use Linked list: Dynamic collection
@@ -46,5 +44,3 @@ public class WhyLinkedList {
      *
      *
      */
-
-}
