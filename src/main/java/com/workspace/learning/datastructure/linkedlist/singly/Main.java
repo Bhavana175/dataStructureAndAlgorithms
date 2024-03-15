@@ -40,8 +40,6 @@ public class Main {
         linkedList.display();
         linkedList.removeMatchedNode(forurthNode);
         linkedList.display();
-        //System.out.println();
-        //System.out.println(linkedList.getLength());
         linkedList.removeFromPosition(2);
         linkedList.display();
         linkedList.insert(111, 2);
