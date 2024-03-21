@@ -39,4 +39,12 @@ public class DLLNode {
     public void setNext(DLLNode next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return "DLLNode{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
+    }
 }
