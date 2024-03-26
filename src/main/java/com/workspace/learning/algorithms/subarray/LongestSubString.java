@@ -1,4 +1,4 @@
-package com.workspace.learning.algorithms.slidingwindow;
+package com.workspace.learning.algorithms.subarray;
 
 import java.util.HashSet;
 

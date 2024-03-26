@@ -1,4 +1,4 @@
-package com.workspace.learning.algorithms.slidingwindow;
+package com.workspace.learning.algorithms.subarray;
 
 public class SubArray {
 
@@ -21,6 +21,8 @@ public class SubArray {
         int[] nums2 = {1, 1, 1, 1, 1, 1, 1, 1};
         int target3 = 4;
         int[] nums3 = {1, 4, 4};
+
+
 
         SubArray obj = new SubArray();
         System.out.println(obj.minSubArrayLen(target, nums));
