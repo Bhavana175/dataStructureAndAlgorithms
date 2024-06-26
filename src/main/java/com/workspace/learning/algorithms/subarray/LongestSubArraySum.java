@@ -17,7 +17,7 @@ public class LongestSubArraySum {
      * <p>
      * <p>
      * <p>
-     * // output =
+     * // output = 7
      * int targetSum = 4;
      */
 

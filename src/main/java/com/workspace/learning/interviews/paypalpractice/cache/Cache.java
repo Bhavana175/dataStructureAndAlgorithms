@@ -1,0 +1,9 @@
+package com.workspace.learning.interviews.paypalpractice.cache;
+
+public interface Cache<K, V> {
+
+     V get(K key);
+     void put(K key, V value);
+     void display();
+
+}

@@ -3,6 +3,7 @@ package com.workspace.learning.algorithms.java8;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Solution {
 
@@ -15,8 +16,12 @@ public class Solution {
         longestWord = Arrays.stream(test.split(" "))
                 .max(Comparator.comparing(String::length))
                 .get();
-
         System.out.println(longestWord);
+
+        System.out.println("longest new ************");
+        Stream.of(test.split(" ")).max((a,b)->a.length()-b.length()).ifPresent(System.out::println);
+        System.out.println("******");
+
 
         Solution obj = new Solution();
         obj.test(new Object());

@@ -27,7 +27,7 @@ public class LongestSubArraySum {
         int sum=0;
         HashMap<Integer,Integer> map = new HashMap<>();
 
-        //key = sum, val = firstIndex, len=i- firstIndex
+        //key = sum, val = firstIndex, maxLen=i- firstIndex
 
         for(int i=0; i<arr.length; i++){
             sum= sum+ arr[i];
