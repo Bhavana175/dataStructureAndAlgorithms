@@ -29,13 +29,24 @@ public class BalancedBinaryTree {
 
     }
 
-    public static boolean isBalanced(TreeNode root) {
-        if(root!=null){
-            if(root.left !=null && root.right !=null){
-                return isBalanced(root.left) && isBalanced(root.right);
-            }else return root.left == null && root.right == null;
+    static boolean isBalanced = true;
+
+    public static  boolean isBalanced(TreeNode root) {
+        calcDepth(root);
+        return isBalanced;
+    }
+
+    public  static int calcDepth(TreeNode root) {
+        if(root == null) {
+            return 0;
         }
-        return true;
+
+        int left = calcDepth(root.left);
+        int right = calcDepth(root.right);
+        if(Math.abs(left - right) > 1) {
+            isBalanced = false;
+        }
+        return 1 + Math.max(left, right);
     }
 
 }
