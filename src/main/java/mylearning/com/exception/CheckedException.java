@@ -1,7 +1,8 @@
 package mylearning.com.exception;
 
-import com.interfaces.MyInterface;
-import com.interfaces.MyInterfaceTwo;
+
+import mylearning.com.interfaces.MyInterface;
+import mylearning.com.interfaces.MyInterfaceTwo;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

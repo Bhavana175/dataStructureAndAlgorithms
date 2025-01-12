@@ -1,6 +1,7 @@
 package mylearning.com.animals;
 
-import com.overridding.ChildSubClass;
+
+import mylearning.com.overridding.ChildSubClass;
 
 import java.util.ArrayList;
 import java.util.HashMap;
