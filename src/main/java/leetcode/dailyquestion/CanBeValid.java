@@ -2,7 +2,7 @@ package leetcode.dailyquestion;
 
 import java.util.Stack;
 
-public class canBeValid {
+public class CanBeValid {
     // https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/
 
     public static void main(String[] args) {
@@ -62,7 +62,7 @@ public class canBeValid {
         }
 
         Stack<Integer> stack = new Stack<>(); // store index for flexible position
-        Stack<Integer> stackLocked = new Stack<>();
+        Stack<Integer> stackLocked = new Stack<>(); // store open braces
 
         // iterate
         for(int i=0; i< n; i++){
@@ -73,7 +73,7 @@ public class canBeValid {
           if(lock=='0'){
               stack.push(i);
           }else {
-              if(ch==')'){
+              if(ch==')'){ // pop from locked stack first
                   if(!stackLocked.isEmpty()){
                       stackLocked.pop();
                   }else if(! stack.isEmpty()){
