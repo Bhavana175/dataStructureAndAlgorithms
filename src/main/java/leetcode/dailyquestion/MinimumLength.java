@@ -6,13 +6,16 @@ import java.util.Map;
 
 public class MinimumLength {
 
+    //https://leetcode.com/problems/minimum-length-of-string-after-operations/?envType=daily-question&envId=2025-01-13
     public static void main(String[] args) {
 
         String s = "abaacbcbb";
 
         System.out.println(minimumLength(s));
+        System.out.println(minimumLength2(s));
+        System.out.println(minimumLength3(s));
     }
-    
+
     public static int minimumLength2(String s) {
         int count = 0;
         HashMap<Character, Integer> map = new HashMap<>();
