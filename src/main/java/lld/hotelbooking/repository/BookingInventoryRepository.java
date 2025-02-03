@@ -1,4 +1,14 @@
 package lld.hotelbooking.repository;
 
-public interface BookingInventoryRepository {
+import lld.hotelbooking.entity.BookingInventory;
+
+import java.util.HashMap;
+
+public class BookingInventoryRepository {
+
+    HashMap<String, BookingInventory> bookingInventoryMap;
+
+    public BookingInventoryRepository() {
+        this.bookingInventoryMap = new HashMap<>();
+    }
 }

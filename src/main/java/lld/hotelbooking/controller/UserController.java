@@ -18,8 +18,8 @@ public class UserController {
 
     @PostMapping("/{userId}/login")
     public ResponseEntity<?> login(@RequestParam User user){
-        userService.login(user);
-        return new  ResponseEntity<>(HttpStatus.OK);
+        String userId = userService.login(user);
+        return new  ResponseEntity<>(String.format("User {}% successfully logged in ",  userId), HttpStatus.OK);
     }
 
     @PostMapping("/{userId}/logout")
@@ -29,8 +29,8 @@ public class UserController {
 
     @PostMapping("/{userId}/signup")
     public ResponseEntity<?> signup(@RequestParam User user){
-        userService.signup(user);
-        return  null;
+        String userId = userService.signup(user);
+        return new  ResponseEntity<>(String.format("User created with id {}%",  userId), HttpStatus.OK);
     }
 
     @DeleteMapping("/{userId}")
