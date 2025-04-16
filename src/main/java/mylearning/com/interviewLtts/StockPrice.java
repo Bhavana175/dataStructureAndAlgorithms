@@ -34,5 +34,4 @@ public class StockPrice {
         }
         return Arrays.asList(buy,sell);
     }
-
 }

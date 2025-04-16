@@ -19,7 +19,7 @@ public class BottomViewBinaryTree {
             private int hd;
             public Pair(TreeNode node, int hd) {
                 this.node = node;
-                this.hd = hd;
+                this.hd = hd;//horizontal distance
             }
         }
 

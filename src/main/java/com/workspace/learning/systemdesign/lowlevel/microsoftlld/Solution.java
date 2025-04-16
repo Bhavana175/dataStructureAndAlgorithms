@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 // you can also use imports, for example:
 // import java.util.*;
@@ -106,7 +108,8 @@ public class Solution {
 
         @Override
         public synchronized List<Packet> retrieveKPacketsBasedOnSize(int k) {
-
+            Map<String, Integer> map = new ConcurrentHashMap<>() ;
+            map.merge("A", 1, Integer::sum);
             return null;
         }
 

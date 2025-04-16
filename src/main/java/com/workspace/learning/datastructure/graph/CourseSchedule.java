@@ -71,4 +71,72 @@ public class CourseSchedule {
         rec[curr] = false;
         return true;
     }
+// ********************************************************************************
+
+    public boolean canFinish2(int numCourses, int[][] prerequisites) {
+
+        int N = numCourses;
+        List<Edge> [] graph = new ArrayList [N];
+        boolean [] vis = new boolean[N];
+        boolean [] rec = new boolean [N];
+        boolean canFinish = false;
+
+        if (prerequisites.length <= 0) {
+            return true;
+        }
+
+        for(int i=0; i<N; i++){
+            graph[i]= new ArrayList<>();
+        }
+
+        for(int i=0; i<prerequisites.length; i++){
+            if (prerequisites[i][0] == prerequisites[i][1]) return false;
+            graph[prerequisites[i][1]].add(new Edge(prerequisites[i][1],prerequisites[i][0]));
+        }
+
+        for(int i=0; i<N; i++){
+            if(!vis[i]){
+                // use i as current
+                if(!dfs2(graph, vis, rec, i)){
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
+
+    public static class Edge{
+        int src;
+        int des;
+
+        public Edge(int src, int des){
+            this.src = src;
+            this.des = des;
+        }
+
+    }
+    public static boolean dfs2(List<Edge> [] graph, boolean [] vis, boolean [] rec, int curr ){
+
+        vis[curr] = true;
+        rec[curr] = true;
+
+        List<Edge> edgeList = graph[curr];
+
+        for(int i=0; i< edgeList.size(); i++){
+
+            Edge e1= edgeList.get(i);
+
+            if(rec[e1.des]){
+                return false; // cycle detected
+            }
+            if(!vis[e1.des]&& !dfs2(graph, vis, rec, e1.des)){
+                return false; // cycle detection
+            }
+
+        }
+        rec[curr]= false;
+        return true;
+    }
+
 }
