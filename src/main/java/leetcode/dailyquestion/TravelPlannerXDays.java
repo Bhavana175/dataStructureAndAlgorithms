@@ -12,7 +12,7 @@ public class TravelPlannerXDays {
         cityPrices.put("Zurich", Arrays.asList(3, 3, 3, 2, 2, 2, 1, 1, 1));
         cityPrices.put("Amsterdam", Arrays.asList(2, 2, 2, 3, 3, 3, 1, 1, 1));
         int x = 3;  // Number of days to stay in each city
-        int budget = 13;  // Maximum budget
+        int budget = 25;  // Maximum budget
         TravelPlannerXDays obj = new TravelPlannerXDays();
         System.out.println(obj.findNumberOfWays(cityPrices, x, budget));
 
@@ -59,6 +59,7 @@ public class TravelPlannerXDays {
         for (String city : totalCities) {
             rec(cityPrices, totalCities, visitedCitySet, city, xDays, cost, budget, output);
         }
+        Collections.sort(output);
         return output;
     }
 

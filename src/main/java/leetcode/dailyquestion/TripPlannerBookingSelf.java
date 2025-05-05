@@ -21,7 +21,7 @@ public class TripPlannerBookingSelf {
         cityPrices.put("Amsterdam", Arrays.asList(2, 2, 2, 3, 3, 3, 1, 1, 1));
 
         int x = 3;  // Number of days to stay in each city
-        int budget = 13;  // Maximum budget
+        int budget = 25;  // Maximum budget
 
         // Get all valid plans
         System.out.println(findTripInBudget(cityPrices, x, budget));
@@ -95,6 +95,7 @@ public class TripPlannerBookingSelf {
             }
             System.out.println("======================");
         }*/
+        Collections.sort(result);
         return result;
 
     }
