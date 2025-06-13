@@ -29,7 +29,7 @@ public class CurrencyConversion {
 
         String exchangeFeeCurrency=  "EUR";
         double  currencyExchangeFeePerc= 1;
-
+        // output total exchange fee : 13.0
         System.out.println( calculateExchangeFee(transactionsList, ratesList, exchangeFeeCurrency, currencyExchangeFeePerc));
     }
 
