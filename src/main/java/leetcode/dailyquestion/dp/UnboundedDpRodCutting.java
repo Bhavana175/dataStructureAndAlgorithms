@@ -22,6 +22,7 @@ public class UnboundedDpRodCutting {
         for (int i = 1; i < rodLength+1; i++) {
             for (int cutSize = 1; cutSize < rodLength+1; cutSize++) {
                 if(rodCutting[i-1]<= cutSize){
+                                            // choose t[i], don,t to reduce t[i-1]
                     t[i][cutSize] = Math.max(prices[i-1]+t[i][cutSize-rodCutting[i-1]] , t[i-1][cutSize]);
                 }else t[i][cutSize] = t[i-1][cutSize];
             }
