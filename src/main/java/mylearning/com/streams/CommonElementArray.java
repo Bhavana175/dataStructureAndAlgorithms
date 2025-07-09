@@ -17,7 +17,14 @@ public class CommonElementArray {
 
         List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
 
-        list1.stream().filter(list2::contains).forEach(System.out::println);
+        list1.stream().filter(num->list2.contains(num)).forEach(System.out::print);
+
+
+        System.out.println();
+
+
+
+        list1.stream().filter(list2::contains).forEach(System.out::print);
 
     }
 

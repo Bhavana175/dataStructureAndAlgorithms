@@ -13,6 +13,10 @@ public class FrequencyElement {
                 "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
 
 
+        Map<String, Long> collect = stationeryList.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        collect.forEach((k,v)-> System.out.println(k+" "+v));
+        System.out.println("---------");
+
         FrequencyElement obj = new FrequencyElement();
         obj.findFrequencyOfEachElement(stationeryList);
 
