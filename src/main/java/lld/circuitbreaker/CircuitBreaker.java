@@ -65,7 +65,7 @@ public class CircuitBreaker {
                     failureCount++;
                     if (failureCount >= threshold) {
                         open();
-                        throw new Exception("Circuit is not open with failureCount " + failureCount);
+                        throw new Exception("Circuit is now open with failureCount " + failureCount);
                     }
                     throw new Exception("Failed , failureCount " + failureCount);
                 }
