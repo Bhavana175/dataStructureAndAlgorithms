@@ -3,12 +3,12 @@ package lld.stack;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Stack<V> {
+public class StackImpl<V> {
 
     private int top = -1;
     private List<V> linkedList;
 
-    public Stack() {
+    public StackImpl() {
         this.top = -1;
         this.linkedList = new LinkedList<>();
     }

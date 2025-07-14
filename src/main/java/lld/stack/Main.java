@@ -3,7 +3,7 @@ package lld.stack;
 public class Main {
     public static void main(String[] args) {
         try {
-            Stack<Integer> stack = new Stack<>();
+            StackImpl<Integer> stack = new StackImpl<>();
             stack.push(10);
             stack.push(20);
             stack.push(30);
