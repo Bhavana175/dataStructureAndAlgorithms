@@ -2,8 +2,10 @@ package leetcode.dailyquestion;
 
 public class KokoEatingBananas875 {
     public static void main(String[] args) {
-        int[] piles = {805306368,805306368,805306368};
-        int h = 1000000000;
+       // int[] piles = {805306368,805306368,805306368};
+       // int h = 1000000000;
+        int [] piles = {3,6,7,11};
+        int h = 8;
         System.out.println(minEatingSpeed(piles, h));
     }
 
@@ -21,7 +23,7 @@ public class KokoEatingBananas875 {
             long timeToEatBanana = 0;
 
             for (int pile : piles) {
-                timeToEatBanana += (pile + mid - 1) / mid; // Simulates Math.ceil(pile / mid)
+                timeToEatBanana += (pile + mid - 1) / mid; // Simulates Math.ceil((double)pile / mid)
             }
 
             if (timeToEatBanana <= h) {
