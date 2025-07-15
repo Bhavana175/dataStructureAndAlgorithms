@@ -38,7 +38,7 @@ public class FirstMissingPositive_41 {
     }
 
     public static int firstMissingPositiveStrictlyIncreasingArray(int[] nums) {
-        Arrays.sort(nums);
+
         if (nums[0] > 0 && nums[0] != 1) {
             return 1;
         }
