@@ -62,7 +62,7 @@ public class CurrencyConversion {
         transactionList.add(new Transaction(6, "PAYIN", 700, "GBP"));
         transactionList.add(new Transaction(7, "PAYOUT", 600, "EUR"));
 
-        System.out.println(calculateExchangeFee(transactionList, "EUR", 0.01));
+        System.out.println(calculateExchangeFee(transactionList, "EUR", 1));
 
     }
 
@@ -90,16 +90,15 @@ public class CurrencyConversion {
                             if (amtNeeded <= availableAmount) {
                                 balanceMap.put(balAvailable.getKey(), availableAmount - amtNeeded);
                                 if (tx.getCurrency().equals(exchangeFeeCurrency)) {
-                                    fee += (tx.amount * currencyExchangeFeePerc);
+                                    fee += (tx.amount * currencyExchangeFeePerc/100);
                                 } else {
-                                    fee += (tx.amount * currencyExchangeFeePerc) * rateListMap.get(tx.getCurrency() + "-" + exchangeFeeCurrency);
+                                    fee += (tx.amount * (currencyExchangeFeePerc/100)) * rateListMap.get(tx.getCurrency() + "-" + exchangeFeeCurrency);
                                 }
                                 paid = true;
                                 break;
                             }
                         }
                     }
-
                 }
                 if (!paid) {
                     System.out.println("Insufficient fund");
@@ -118,11 +117,4 @@ public class CurrencyConversion {
         String currency;
     }
 
-    @Data
-    @AllArgsConstructor
-    static class Rate {
-        String from;
-        String to;
-        double rate;
-    }
 }
