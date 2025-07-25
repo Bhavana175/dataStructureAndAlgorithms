@@ -4,8 +4,9 @@ import java.util.Stack;
 
 public class LongestCommonSubsequenceStrDP {
     public static void main(String[] args) {
-        String x = "abcdefgh";
-        String y = "abcdytegh";
+        String x = "abcd";
+        String y = "cefd";/*String x = "abcdefgh";
+        String y = "abcdytegh";*/
         System.out.println(findLongestCommonSubsequence(x, y));
     }
 

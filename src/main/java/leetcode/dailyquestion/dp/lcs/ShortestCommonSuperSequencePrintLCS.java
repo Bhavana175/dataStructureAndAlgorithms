@@ -3,8 +3,10 @@ package leetcode.dailyquestion.dp.lcs;
 public class ShortestCommonSuperSequencePrintLCS {
     public static void main(String[] args) {
 
+        String s1 = "abcd";
+        String s2 = "cefd";/*
         String s1 = "gemek";
-        String s2 = "erkse";
+        String s2 = "erkse";*/
 
         System.out.println(shortestCommonSuperSequence(s1, s2));
 
